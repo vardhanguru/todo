@@ -80,6 +80,21 @@ DATABASES = {
     }
 }
 
+import os
+
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'project',
+        'USER': 'root',
+        'PASSWORD': os.getenv('PASSWORD')
+    }
+}
+
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
